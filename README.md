@@ -143,6 +143,17 @@ The `Dockerfile` tells Docker **how to build** your image: which base image to u
 
 3. Save the file.
 
+Your Directory structure should look like this:
+
+```
+flask_app_docker/
+├── app.py
+├── requirements.txt
+└── Dockerfile
+```
+
+
+
 ### Explanation of each instruction
 
 * `FROM python:3.9-slim-buster`
