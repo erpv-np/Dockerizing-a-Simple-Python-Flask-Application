@@ -16,8 +16,6 @@
 
 > If Docker Desktop is installed, make sure it is **running** (look for the Docker whale icon in your system tray).
 
-
-
 ---
 
 ## Step 1: Create the project folder
@@ -399,16 +397,14 @@ docker rmi flask-app:v1
 
 ---
 
----
-
-# ✅ **Step 10: Practice Exercise – Customize Your Flask Website With Your Name**
+# **Step 10: Practice Exercise – Customize Your Flask Website With Your Name**
 
 In this exercise, you will customize your Flask application's homepage so that the webpage displays **your name, admin number, and class**.
 This proves that you successfully modified and rebuilt your Docker image.
 
 ---
 
-## **🛠️ Task Requirements**
+## ** Task Requirements**
 
 You must update your Flask application so that visiting:
 
@@ -424,7 +420,7 @@ You can implement this in **either Option A (hard-code in app.py)** or **Option 
 
 ---
 
-## **🅰️ Option A — Hard-code your name in `app.py`**
+## ** Option A — Hard-code your name in `app.py`**
 
 Open **app.py** and replace the return string:
 
@@ -456,7 +452,7 @@ docker run -p 5000:5000 -d flask-app:v3
 
 ---
 
-## **🅱️ Option B — Use an Environment Variable (Recommended)**
+## ** Option B — Use an Environment Variable (Recommended)**
 
 Modify `app.py` to use an environment variable:
 
