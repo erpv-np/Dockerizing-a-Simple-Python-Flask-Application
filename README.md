@@ -399,11 +399,6 @@ docker rmi flask-app:v1
 
 ---
 
-Here is a **new Step 10** written in clean Markdown format, fully aligned with your lab style.
-It includes **instructions**, **expected output**, and **evidence capture requirement**.
-
-You can paste this into your README or lab sheet directly.
-
 ---
 
 # ✅ **Step 10: Practice Exercise – Customize Your Flask Website With Your Name**
