@@ -1,6 +1,6 @@
 # Dockerizing a Simple Python Flask Application
 
-## Lab 2B – Dockerizing a Simple Python Flask Application
+## Lab 5B – Dockerizing a Simple Python Flask Application
 
 **Step-by-step student guide**
 
