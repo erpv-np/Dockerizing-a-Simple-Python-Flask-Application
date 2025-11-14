@@ -399,6 +399,129 @@ docker rmi flask-app:v1
 
 ---
 
+Here is a **new Step 10** written in clean Markdown format, fully aligned with your lab style.
+It includes **instructions**, **expected output**, and **evidence capture requirement**.
+
+You can paste this into your README or lab sheet directly.
+
+---
+
+# ✅ **Step 10: Practice Exercise – Customize Your Flask Website With Your Name**
+
+In this exercise, you will customize your Flask application's homepage so that the webpage displays **your name, admin number, and class**.
+This proves that you successfully modified and rebuilt your Docker image.
+
+---
+
+## **🛠️ Task Requirements**
+
+You must update your Flask application so that visiting:
+
+**[http://localhost:5000](http://localhost:5000)**
+
+shows **your own customized message**, for example:
+
+```
+Hello, this is John Doe (P1234567), DFSD/FT/02 – Dockerized Flask App!
+```
+
+You can implement this in **either Option A (hard-code in app.py)** or **Option B (environment variable)**.
+
+---
+
+## **🅰️ Option A — Hard-code your name in `app.py`**
+
+Open **app.py** and replace the return string:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, this is YOUR NAME (ADMIN NO), YOUR CLASS – Dockerized Flask App!'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+
+Example:
+
+```python
+return 'Hello, this is John Doe (P1234567), DOP/T02 – Dockerized Flask App!'
+```
+
+Rebuild and run:
+
+```bash
+docker build -t flask-app:v3 .
+docker run -p 5000:5000 -d flask-app:v3
+```
+
+---
+
+## **🅱️ Option B — Use an Environment Variable (Recommended)**
+
+Modify `app.py` to use an environment variable:
+
+```python
+from flask import Flask
+import os
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    student = os.environ.get("NAME", "Student")
+    return f'Hello, this is {student} – Dockerized Flask App!'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+
+Rebuild:
+
+```bash
+docker build -t flask-app:v3 .
+```
+
+Run with your name injected:
+
+```bash
+docker run -p 5000:5000 -e NAME="Tan Wei Ming (P1234567), DOP/T02" -d flask-app:v3
+```
+
+Expected output:
+
+```
+Hello, this is John Doe (P1234567), DOP/T02 – Dockerized Flask App!
+```
+
+---
+
+# 📸 **Submission Requirement for Step 10**
+
+You must capture **two screenshots** as evidence:
+
+### **1. Zipped the flask_app_docker and submit**
+
+### **2. Screenshot of your customized webpage**
+
+Take a screenshot of your browser showing:
+
+👉 **[http://localhost:5000](http://localhost:5000)**
+
+with your **name, admin number, and class clearly visible**.
+
+Example expected browser output:
+
+> *Hello, this is John Doe (P1234567), DOP/T02 – Dockerized Flask App!*
+
+---
+
+---
+
 ## Common issues & troubleshooting
 
 **1. “Port already in use” error when running `docker run`**
