@@ -493,8 +493,6 @@ Hello, this is John Doe (P1234567), DOP/T02 – Dockerized Flask App!
 
 # 📸 **Submission Requirement for Step 10**
 
-You must capture **two screenshots** as evidence:
-
 ### **1. Zipped the flask_app_docker and submit**
 
 ### **2. Screenshot of your customized webpage**
